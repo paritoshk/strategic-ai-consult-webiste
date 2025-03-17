@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,35 +7,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 9%;
+    --card: 0 0% 3%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 9%;
+    --popover: 0 0% 3%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 7%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 13%;
+    --secondary: 0 0% 5%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 13%;
-    --muted-foreground: 0 0% 47%;
+    --muted: 0 0% 5%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 7%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 0% 100%;
+    --destructive-foreground: 0 0% 0%;
 
-    --border: 0 0% 13%;
-    --input: 0 0% 13%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
     --ring: 0 0% 100%;
 
-    --radius: 0.75rem;
+    --radius: 0rem;
   }
 
   * {
@@ -47,16 +47,16 @@
   }
 
   body {
-    @apply bg-black text-white font-sans antialiased;
+    @apply bg-black text-white font-serif antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-serif font-medium tracking-tight;
+    @apply font-serif font-normal tracking-tight;
   }
 
   .glass-card {
-    @apply bg-navy-light/80 backdrop-blur-md border border-white/10 shadow-xl;
+    @apply bg-black/80 backdrop-blur-md border border-white/10 shadow-xl;
   }
   
   .link-underline {
@@ -112,10 +112,6 @@
 }
 
 @layer utilities {
-  .font-sans {
-    font-family: 'Poppins', sans-serif;
-  }
-  
   .font-serif {
     font-family: 'Playfair Display', serif;
   }

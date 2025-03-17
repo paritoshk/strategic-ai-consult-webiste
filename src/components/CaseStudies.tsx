@@ -40,9 +40,9 @@ const CaseStudies: React.FC = () => {
     <section id="case-studies" className="section-padding relative">
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-green text-sm uppercase tracking-wider font-medium">Case Studies</span>
+          <span className="text-white text-sm uppercase tracking-wider font-serif">Case Studies</span>
           <h2 className="text-3xl md:text-5xl font-serif mt-2">Success Stories</h2>
-          <p className="text-slate mt-4 max-w-2xl mx-auto">
+          <p className="text-slate mt-4 max-w-2xl mx-auto font-serif">
             Real-world examples of how our strategic consulting has driven measurable results for venture capital firms and their portfolio companies.
           </p>
         </div>
@@ -51,25 +51,25 @@ const CaseStudies: React.FC = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={index}
-              className="glass-card rounded-xl p-6 flex flex-col h-full group opacity-0 animate-fadeIn"
+              className="glass-card rounded-none p-6 flex flex-col h-full group opacity-0 animate-fadeIn"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex-1">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-medium">{study.title}</h3>
-                  <span className="p-2 rounded-full bg-navy-dark group-hover:bg-green/20 transition-colors">
-                    <ArrowUpRight className="w-4 h-4 text-green" />
+                  <h3 className="text-xl font-serif">{study.title}</h3>
+                  <span className="p-2 rounded-none bg-black group-hover:bg-white/20 transition-colors">
+                    <ArrowUpRight className="w-4 h-4 text-white" />
                   </span>
                 </div>
-                <p className="text-slate-light mb-6">{study.description}</p>
+                <p className="text-slate-light mb-6 font-serif">{study.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="text-white font-medium mb-2">Impact:</h4>
+                  <h4 className="text-white font-serif mb-2">Impact:</h4>
                   <ul className="space-y-2">
                     {study.impact.map((point, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green mt-1.5"></span>
-                        <span className="text-slate-light text-sm">{point}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-white mt-1.5"></span>
+                        <span className="text-slate-light text-sm font-serif">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -77,12 +77,12 @@ const CaseStudies: React.FC = () => {
                 
                 {study.companies.length > 0 && (
                   <div>
-                    <h4 className="text-white font-medium mb-2">Companies:</h4>
+                    <h4 className="text-white font-serif mb-2">Companies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {study.companies.map((company, i) => (
                         <span 
                           key={i}
-                          className="px-2 py-1 bg-navy-dark rounded text-xs text-slate-light"
+                          className="px-2 py-1 bg-black rounded-none text-xs text-slate-light font-serif border border-white/10"
                         >
                           {company}
                         </span>
@@ -98,7 +98,7 @@ const CaseStudies: React.FC = () => {
         <div className="mt-16 text-center">
           <a 
             href="#contact" 
-            className="px-6 py-3 border border-green text-green hover:bg-green/10 transition-colors inline-flex items-center gap-2 rounded-md"
+            className="px-6 py-3 border border-white text-white hover:bg-white/10 transition-colors inline-flex items-center gap-2 rounded-none font-serif"
           >
             Discuss Your Project
             <ArrowUpRight className="w-4 h-4" />
@@ -107,7 +107,7 @@ const CaseStudies: React.FC = () => {
       </div>
       
       {/* Decorative element */}
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-green/10 rounded-full blur-[120px] opacity-20" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[120px] opacity-20" />
     </section>
   );
 };

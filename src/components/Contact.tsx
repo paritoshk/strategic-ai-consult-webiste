@@ -45,57 +45,57 @@ const Contact: React.FC = () => {
     <section id="contact" className="section-padding relative">
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-green text-sm uppercase tracking-wider font-medium">Contact</span>
+          <span className="text-white text-sm uppercase tracking-wider font-serif">Contact</span>
           <h2 className="text-3xl md:text-5xl font-serif mt-2">Get in Touch</h2>
-          <p className="text-slate mt-4 max-w-2xl mx-auto">
+          <p className="text-slate mt-4 max-w-2xl mx-auto font-serif">
             Ready to transform your approach to AI strategy and investment? Let's connect and discuss how I can help you achieve your goals.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="glass-card rounded-xl p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn">
-              <div className="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center mb-4">
-                <Mail className="w-5 h-5 text-green" />
+            <div className="glass-card rounded-none p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                <Mail className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-medium mb-2">Email</h3>
+              <h3 className="text-lg font-serif mb-2">Email</h3>
               <a 
                 href="mailto:pari2798@gmail.com" 
-                className="text-slate hover:text-white transition-colors"
+                className="text-slate hover:text-white transition-colors font-serif"
               >
                 pari2798@gmail.com
               </a>
             </div>
             
-            <div className="glass-card rounded-xl p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
-              <div className="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center mb-4">
-                <Phone className="w-5 h-5 text-green" />
+            <div className="glass-card rounded-none p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn" style={{ animationDelay: "0.1s" }}>
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                <Phone className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-medium mb-2">Phone</h3>
+              <h3 className="text-lg font-serif mb-2">Phone</h3>
               <a 
                 href="tel:+16463212902" 
-                className="text-slate hover:text-white transition-colors"
+                className="text-slate hover:text-white transition-colors font-serif"
               >
                 (646) 321-2902
               </a>
             </div>
             
-            <div className="glass-card rounded-xl p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-              <div className="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center mb-4">
-                <AlertCircle className="w-5 h-5 text-green" />
+            <div className="glass-card rounded-none p-6 flex flex-col items-center text-center opacity-0 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                <AlertCircle className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-lg font-medium mb-2">Consultation</h3>
-              <p className="text-slate">
+              <h3 className="text-lg font-serif mb-2">Consultation</h3>
+              <p className="text-slate font-serif">
                 Email to book a consultation call on demand
               </p>
             </div>
           </div>
           
-          <div className="glass-card rounded-xl p-6 md:p-8">
+          <div className="glass-card rounded-none p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
+                  <label htmlFor="name" className="text-sm font-serif">
                     Name
                   </label>
                   <Input
@@ -105,11 +105,11 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-navy-dark border-white/10 text-white"
+                    className="bg-black border-white/10 text-white rounded-none font-serif"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
+                  <label htmlFor="email" className="text-sm font-serif">
                     Email
                   </label>
                   <Input
@@ -120,13 +120,13 @@ const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-navy-dark border-white/10 text-white"
+                    className="bg-black border-white/10 text-white rounded-none font-serif"
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">
+                <label htmlFor="subject" className="text-sm font-serif">
                   Subject
                 </label>
                 <Input
@@ -136,12 +136,12 @@ const Contact: React.FC = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="bg-navy-dark border-white/10 text-white"
+                  className="bg-black border-white/10 text-white rounded-none font-serif"
                 />
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
+                <label htmlFor="message" className="text-sm font-serif">
                   Message
                 </label>
                 <Textarea
@@ -152,14 +152,14 @@ const Contact: React.FC = () => {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-navy-dark border-white/10 text-white resize-none"
+                  className="bg-black border-white/10 text-white rounded-none font-serif resize-none"
                 />
               </div>
               
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-green hover:bg-green/90 text-navy-dark"
+                className="w-full bg-white hover:bg-white/90 text-black rounded-none font-serif"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send className="w-4 h-4 ml-2" />
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute top-1/3 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-[120px] opacity-20" />
+      <div className="absolute top-1/3 left-0 w-72 h-72 bg-white/10 rounded-full blur-[120px] opacity-20" />
     </section>
   );
 };

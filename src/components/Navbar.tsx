@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     )}>
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
-          <span className="text-xl md:text-2xl font-serif font-bold text-white">Strategic Matter</span>
+          <span className="text-xl md:text-2xl font-serif text-white">Strategic Matter</span>
         </a>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -40,14 +40,14 @@ const Navbar: React.FC = () => {
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-slate hover:text-white link-underline text-sm tracking-wide"
+              className="text-slate hover:text-white link-underline text-sm tracking-wide font-serif"
             >
               {link.name}
             </a>
           ))}
           <a 
             href="#contact" 
-            className="px-4 py-2 rounded-md border border-white text-white hover:bg-white/10 transition-colors text-sm"
+            className="px-4 py-2 rounded-none border border-white text-white hover:bg-white/10 transition-colors text-sm font-serif"
           >
             Get in Touch
           </a>
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-xl text-white hover:text-gray-300 transition-colors"
+              className="text-xl text-white hover:text-gray-300 transition-colors font-serif"
               onClick={toggleMenu}
             >
               {link.name}
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
           ))}
           <a 
             href="#contact" 
-            className="px-6 py-3 rounded-md border border-white text-white hover:bg-white/10 transition-colors"
+            className="px-6 py-3 rounded-none border border-white text-white hover:bg-white/10 transition-colors font-serif"
             onClick={toggleMenu}
           >
             Get in Touch
