@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -93,6 +93,13 @@
     @apply flex whitespace-nowrap animate-[scrollX_20s_linear_infinite];
   }
 
+  .grid-background {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
   @keyframes scrollX {
     0% {
       transform: translateX(0);
@@ -105,7 +112,7 @@
 
 @layer utilities {
   .font-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   .font-serif {

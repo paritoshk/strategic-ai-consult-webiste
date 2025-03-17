@@ -3,37 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const gridRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (gridRef.current) {
-      observer.observe(gridRef.current);
-    }
-    
-    return () => {
-      if (gridRef.current) {
-        observer.unobserve(gridRef.current);
-      }
-    };
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
       {/* Background grid pattern */}
-      <div 
-        ref={gridRef}
-        className="absolute inset-0 opacity-0 transition-opacity duration-1000 bg-grid-pattern bg-navy"
-      />
+      <div className="absolute inset-0 grid-background bg-navy opacity-100 z-0" />
       
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col max-w-4xl mx-auto">
