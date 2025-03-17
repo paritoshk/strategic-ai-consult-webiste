@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Waves } from '@/components/ui/waves';
 
 const Hero: React.FC = () => {
   return (
@@ -8,7 +9,24 @@ const Hero: React.FC = () => {
       {/* Background grid pattern */}
       <div className="absolute inset-0 grid-background opacity-100 z-0" />
       
-      <div className="container mx-auto relative z-10">
+      {/* Waves background */}
+      <div className="absolute inset-0 z-10 opacity-60">
+        <Waves 
+          lineColor="rgba(255, 255, 255, 0.1)"
+          backgroundColor="transparent"
+          waveSpeedX={0.0125}
+          waveSpeedY={0.005}
+          waveAmpX={24}
+          waveAmpY={12}
+          xGap={15}
+          yGap={40}
+          friction={0.925}
+          tension={0.005}
+          maxCursorMove={80}
+        />
+      </div>
+      
+      <div className="container mx-auto relative z-20">
         <div className="flex flex-col max-w-4xl mx-auto">
           <span className="text-white font-serif text-sm mb-5 opacity-0 animate-fadeInDelay1">
             AI Strategy for Future-Focused Organizations

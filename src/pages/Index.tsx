@@ -7,6 +7,7 @@ import About from '@/components/About';
 import CaseStudies from '@/components/CaseStudies';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { SignupForm } from '@/components/ui/signup-form';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -53,7 +54,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-navy text-white overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -61,6 +62,25 @@ const Index: React.FC = () => {
         <About />
         <CaseStudies />
         <Contact />
+        
+        {/* Signup Form Section */}
+        <section className="section-padding relative">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-white text-sm uppercase tracking-wider font-serif">Newsletter</span>
+              <h2 className="text-3xl md:text-5xl font-serif mt-2">Join Our Community</h2>
+              <p className="text-slate mt-4 max-w-2xl mx-auto font-serif">
+                Stay updated with the latest insights and trends in AI strategy and consulting.
+              </p>
+            </div>
+            <div className="max-w-md mx-auto">
+              <SignupForm />
+            </div>
+          </div>
+          
+          {/* Floating gradient */}
+          <div className="absolute top-1/4 right-0 w-80 h-80 bg-white/5 rounded-full blur-[100px] opacity-20" />
+        </section>
       </main>
       <Footer />
     </div>

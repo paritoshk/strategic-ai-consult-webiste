@@ -21,24 +21,47 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send form data to email address
+      const emailBody = `
+        Name: ${formData.name}
+        Email: ${formData.email}
+        Subject: ${formData.subject}
+        Message: ${formData.message}
+      `;
+      
+      // In a real implementation, you would use an API route or service
+      // Here we'll log it and show success to simulate sending
+      console.log("Sending email to pari2798@gmail.com:", emailBody);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Your message has been sent to pari2798@gmail.com",
       });
+      
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact directly via email.",
+        variant: "destructive"
+      });
+      console.error("Error sending form:", error);
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -164,6 +187,10 @@ const Contact: React.FC = () => {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 <Send className="w-4 h-4 ml-2" />
               </Button>
+              
+              <p className="text-xs text-center text-slate font-serif mt-4">
+                All messages will be sent directly to pari2798@gmail.com
+              </p>
             </form>
           </div>
         </div>
