@@ -28,11 +28,11 @@ const Navbar: React.FC = () => {
   return (
     <header className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
-      isScrolled ? 'py-3 bg-navy/90 backdrop-blur-md shadow-md' : 'py-5 bg-transparent'
+      isScrolled ? 'py-3 bg-black/90 backdrop-blur-md shadow-md' : 'py-5 bg-transparent'
     )}>
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
-          <span className="text-xl md:text-2xl font-serif font-bold text-green">Strategic Matter</span>
+          <span className="text-xl md:text-2xl font-serif font-bold text-white">Strategic Matter</span>
         </a>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           ))}
           <a 
             href="#contact" 
-            className="px-4 py-2 rounded-md border border-green text-green hover:bg-green/10 transition-colors text-sm"
+            className="px-4 py-2 rounded-md border border-white text-white hover:bg-white/10 transition-colors text-sm"
           >
             Get in Touch
           </a>
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
       
       {/* Mobile menu */}
       <div className={cn(
-        "fixed inset-0 bg-navy-dark/95 flex flex-col justify-center items-center transition-all duration-300 ease-in-out z-40 md:hidden",
+        "fixed inset-0 bg-black/95 flex flex-col justify-center items-center transition-all duration-300 ease-in-out z-40 md:hidden",
         isMenuOpen ? "opacity-100 top-0" : "opacity-0 top-[-100%] pointer-events-none"
       )}>
         <nav className="flex flex-col items-center space-y-8 p-8">
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-xl text-white hover:text-green transition-colors"
+              className="text-xl text-white hover:text-gray-300 transition-colors"
               onClick={toggleMenu}
             >
               {link.name}
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
           ))}
           <a 
             href="#contact" 
-            className="px-6 py-3 rounded-md border border-green text-green hover:bg-green/10 transition-colors"
+            className="px-6 py-3 rounded-md border border-white text-white hover:bg-white/10 transition-colors"
             onClick={toggleMenu}
           >
             Get in Touch

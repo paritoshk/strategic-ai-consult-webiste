@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-serif font-bold text-white mb-2">Strategic <span className="text-green">Matter</span></h2>
+            <h2 className="text-2xl font-serif font-bold text-white mb-2">Strategic <span className="text-white">Matter</span></h2>
             <p className="text-slate text-sm max-w-xs">
               Empowering organizations with end-to-end AI strategy and consulting services.
             </p>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 href="https://www.linkedin.com/in/paritoshkul/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-navy-light transition-colors"
+                className="p-2 rounded-full hover:bg-gray-800 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-slate hover:text-white transition-colors" />
@@ -36,14 +36,14 @@ const Footer: React.FC = () => {
                 href="https://github.com/paritoshk" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-navy-light transition-colors"
+                className="p-2 rounded-full hover:bg-gray-800 transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 text-slate hover:text-white transition-colors" />
               </a>
               <a 
                 href="mailto:pari2798@gmail.com" 
-                className="p-2 rounded-full hover:bg-navy-light transition-colors"
+                className="p-2 rounded-full hover:bg-gray-800 transition-colors"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5 text-slate hover:text-white transition-colors" />
@@ -52,10 +52,10 @@ const Footer: React.FC = () => {
             
             <button 
               onClick={scrollToTop}
-              className="p-3 rounded-full bg-navy-light hover:bg-green/20 transition-colors group"
+              className="p-3 rounded-full bg-gray-800 hover:bg-white/20 transition-colors group"
               aria-label="Scroll to top"
             >
-              <ArrowUp className="w-4 h-4 text-green group-hover:animate-pulse" />
+              <ArrowUp className="w-4 h-4 text-white group-hover:animate-pulse" />
             </button>
           </div>
         </div>

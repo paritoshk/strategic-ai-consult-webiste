@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 220 36% 11%;
-    --foreground: 213 31% 91%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 213 31% 91%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 213 31% 91%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 170 100% 70%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 213 31% 91%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 47%;
 
-    --accent: 170 100% 70%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 213 31% 91%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 170 100% 70%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 0 0% 100%;
 
     --radius: 0.75rem;
   }
@@ -47,7 +47,7 @@
   }
 
   body {
-    @apply bg-navy text-white font-sans antialiased;
+    @apply bg-black text-white font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -71,7 +71,7 @@
     display: block;
     right: 0;
     bottom: -2px;
-    @apply bg-green;
+    @apply bg-white;
     transition: width 0.3s ease;
   }
   
@@ -98,13 +98,14 @@
     background-image:
       linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-color: #000000;
   }
 
   @keyframes scrollX {
-    0% {
+    from {
       transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(-50%);
     }
   }
@@ -123,6 +124,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @apply bg-gradient-to-r from-green to-cyan-300;
+    @apply bg-gradient-to-r from-white to-gray-300;
   }
 }
