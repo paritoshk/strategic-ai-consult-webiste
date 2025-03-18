@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from "@/lib/utils";
-import { Button } from '@/components/ui/moving-border';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,14 +44,12 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <Button 
-            as="a"
+          <a 
             href="#contact" 
-            className="bg-black text-white border-white/20 font-serif h-10 w-auto px-4"
-            containerClassName="h-10 w-auto"
+            className="px-4 py-2 font-serif rounded-md bg-slate-800/50 border border-white/20 text-white hover:bg-white/10 transition duration-300 text-sm tracking-wide shadow-sm"
           >
             Get in Touch
-          </Button>
+          </a>
         </nav>
         
         <button 
@@ -81,14 +77,13 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <Button 
-            as="a"
+          <a 
             href="#contact" 
-            className="bg-black text-white border-white/20 font-serif"
+            className="px-6 py-3 font-serif rounded-md bg-slate-800/50 border border-white/20 text-white hover:bg-white/10 transition duration-300 text-sm tracking-wide shadow-sm mt-4"
             onClick={toggleMenu}
           >
             Get in Touch
-          </Button>
+          </a>
         </nav>
       </div>
     </header>

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -8,7 +7,6 @@ import CaseStudies from '@/components/CaseStudies';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { SignupForm } from '@/components/ui/signup-form';
-import { Button } from '@/components/ui/moving-border';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -27,42 +25,32 @@ const Index: React.FC = () => {
         }
       });
     });
-    
-    // Add intersection observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fadeIn');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.glass-card').forEach(card => {
-      if (!card.classList.contains('animate-fadeIn')) {
-        observer.observe(card);
-      }
-    });
-
+        
     return () => {
-      observer.disconnect();
+      // Clean up event listeners
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.removeEventListener('click', function() {});
+      });
     };
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="bg-black text-white">
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <About />
-        <CaseStudies />
-        <Contact />
+        <div id="services" className="pt-16">
+          <Services />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="case-studies">
+          <CaseStudies />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
         
         {/* Signup Form Section */}
         <section className="section-padding relative">
@@ -78,9 +66,12 @@ const Index: React.FC = () => {
               <SignupForm />
             </div>
             <div className="mt-8 text-center">
-              <Button className="bg-black text-white border-white/20 font-serif mx-auto">
+              <a 
+                href="#"
+                className="px-6 py-3 font-serif rounded-md bg-slate-800/50 border border-white/20 text-white hover:bg-white/10 transition duration-300 inline-block text-sm tracking-wide shadow-sm"
+              >
                 Subscribe Now
-              </Button>
+              </a>
             </div>
           </div>
           
