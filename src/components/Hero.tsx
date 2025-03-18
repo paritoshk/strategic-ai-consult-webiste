@@ -2,15 +2,22 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Waves } from '@/components/ui/waves';
+import { LampDemo } from '@/components/ui/lamp';
+import { Button } from '@/components/ui/moving-border';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
+      {/* Lamp component at the top */}
+      <div className="absolute inset-0 z-0">
+        <LampDemo />
+      </div>
+      
       {/* Background grid pattern */}
-      <div className="absolute inset-0 grid-background opacity-100 z-0" />
+      <div className="absolute inset-0 grid-background opacity-100 z-10" />
       
       {/* Waves background */}
-      <div className="absolute inset-0 z-10 opacity-60">
+      <div className="absolute inset-0 z-20 opacity-60">
         <Waves 
           lineColor="rgba(255, 255, 255, 0.1)"
           backgroundColor="transparent"
@@ -26,8 +33,8 @@ const Hero: React.FC = () => {
         />
       </div>
       
-      <div className="container mx-auto relative z-20">
-        <div className="flex flex-col max-w-4xl mx-auto">
+      <div className="container mx-auto relative z-30">
+        <div className="flex flex-col max-w-4xl mx-auto mt-64">
           <span className="text-white font-serif text-sm mb-5 opacity-0 animate-fadeInDelay1">
             AI Strategy for Future-Focused Organizations
           </span>
@@ -39,19 +46,23 @@ const Hero: React.FC = () => {
             Fractional CTO, Strategic Advisor, and Angel Investor.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 opacity-0 animate-fadeInDelay4">
-            <a 
+            <Button 
+              as="a"
               href="#services" 
-              className="px-6 py-3 bg-white hover:bg-white/90 text-black font-serif rounded-none transition-colors flex items-center justify-center gap-2 group"
+              className="bg-black text-white border-white/20 font-serif flex items-center justify-center"
+              containerClassName="w-full sm:w-auto"
             >
               Our Services
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              as="a"
               href="#case-studies" 
-              className="px-6 py-3 border border-white/20 hover:border-white/40 text-white font-serif rounded-none transition-colors flex items-center justify-center"
+              className="bg-black text-white border-white/20 font-serif"
+              containerClassName="w-full sm:w-auto"
             >
               View Case Studies
-            </a>
+            </Button>
           </div>
         </div>
       </div>

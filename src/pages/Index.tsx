@@ -8,6 +8,7 @@ import CaseStudies from '@/components/CaseStudies';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { SignupForm } from '@/components/ui/signup-form';
+import { Button } from '@/components/ui/moving-border';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -75,6 +76,11 @@ const Index: React.FC = () => {
             </div>
             <div className="max-w-md mx-auto">
               <SignupForm />
+            </div>
+            <div className="mt-8 text-center">
+              <Button className="bg-black text-white border-white/20 font-serif mx-auto">
+                Subscribe Now
+              </Button>
             </div>
           </div>
           
